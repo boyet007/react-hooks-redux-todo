@@ -4,12 +4,13 @@
 }
 
 .ul.todo-list{
-  list-style-type:none;
+  
   padding:0;
 }
 
 ul.todo-list li{
   margin: 10px 0;
+  list-style-type:none;
 }
 
 span.complete{

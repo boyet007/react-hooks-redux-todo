@@ -3,9 +3,7 @@ import { connect } from 'react-redux'
 import { toggleTodoComplete, deleteTodoAction } from '../redux'
 
 const TodoList = (props) => {
-    const todos = props
-    console.log('props')
-    console.log(todos)
+    const { todos } = props
     const toggleComplete = (todoId) => props.toggleTodoComplete(todoId)
     const deleteTodo = (todoId) => props.deleteTodoAction(todoId)
     return <div>
@@ -14,10 +12,10 @@ const TodoList = (props) => {
                 <li key={todo.id}>
                     <input type="checkbox"
                         checked={todo.complete}
-                        onChange={toggleComplete(todo.Id)} />
+                        onChange={toggleComplete.bind(null, todo.id)} />
                         <span className={todo.complete ? 'complete' : null}>{todo.name}</span>
                         <span className="delete-button" 
-                            onClick={deleteTodo.bind(todo.id)}>X</span></li>
+                            onClick={deleteTodo.bind(null, todo.id)}>X</span></li>
             )) } 
         </ul>
     </div>;

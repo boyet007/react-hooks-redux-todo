@@ -12,12 +12,10 @@ const initialState = {
 export const store = createStore(
     reducer,
     initialState,
-    // Window.devToolsExtension && window.devToolsExtension()
+    Window.devToolsExtension && window.devToolsExtension()
 )
 
 function reducer( state, {type, payload}) {
-    console.log('payload')
-    console.log(payload)
     switch(type) {
         case 'ADD_TODO':
             return {
