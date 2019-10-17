@@ -1,22 +1,36 @@
-.App {
-  text-align: center;
+.main{
+  max-width: 350px;
+  margin: 20px auto;
 }
 
-.App-logo {
-  height: 40vmin;
+.ul.todo-list{
+  list-style-type:none;
+  padding:0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+ul.todo-list li{
+  margin: 10px 0;
 }
 
-.App-link {
-  color: #09d3ac;
+span.complete{
+  text-decoration: line-through;
+}
+
+span.delete-button{
+  background-color: red;
+  color:white;
+  padding:3px;
+  float:right;
+}
+
+span.delete-button hover{
+  cursor: pointer;
+}
+
+.form-div{
+  text-align:center;
+}
+
+.form-div input{
+  width: 250px;
 }
