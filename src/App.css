@@ -24,7 +24,7 @@ span.delete-button{
   float:right;
 }
 
-span.delete-button hover{
+span.delete-button:hover{
   cursor: pointer;
 }
 
